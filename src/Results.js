@@ -9,9 +9,14 @@ class Results extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     handleSubmit(evt){
+        evt.preventDefault()
+       
 
     }
     handleChange(evt){
+        this.setState({
+            username:evt.target.value
+        })
 
     }
     render(){
