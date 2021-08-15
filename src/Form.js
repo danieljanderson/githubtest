@@ -22,7 +22,7 @@ class Form extends Component {
     async handleSubmit(evt){
         // I would like to refactor this repeative
         evt.preventDefault()
-        const url = `http://api.github.com/search/users?q=${this.state.username}`
+        const url = `https://api.github.com/search/users?q=${this.state.username}`
      
         let response = await axios.get(url)
    
