@@ -28,13 +28,7 @@ class Form extends Component {
    
         let data = response.data.items
        console.log(data)
-
-       
-        
-        
-     
-       
-
+        this.setState({data:data})     
     }
    
     handleChange(evt){
@@ -57,7 +51,23 @@ class Form extends Component {
                     </input>
                 <button>Search</button>
             </form>
-         
+            <table>
+                <thead>
+                    <tr>
+                    <th>Username</th>
+                    <th>link to github</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                        {this.state.data.map((user)=>(
+                            <Entry user={user} key={user.id} ></Entry>
+                        ))}
+                    
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
            </div>
 
         )
